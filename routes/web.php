@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PurchaseController;
+
 
 // Halaman Welcome
 Route::get('/', function () {
@@ -42,6 +44,18 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/history', function () {
         return view('history');
     })->name('history');
+        Route::get('/concerts/{concert}/buy', [PurchaseController::class, 'show'])
+        ->name('purchase.show');
+
+    Route::post('/concerts/{concert}/buy', [PurchaseController::class, 'store'])
+        ->name('purchase.store');
+    Route::get('/purchase/{order}/detail', [PurchaseController::class, 'detail'])
+    ->name('purchase.detail');
+
+Route::post('/purchase/{order}/detail', [PurchaseController::class, 'processDetail'])
+    ->name('purchase.processDetail');
+
+
 });
 
 // ============================
