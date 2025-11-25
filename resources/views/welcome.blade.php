@@ -128,7 +128,7 @@
     <div class="max-w-7xl mx-auto px-6">
 
         <!-- Header with search -->
-        <div class="flex items-center justify-between mb-6">
+        <div class="flex items-center justify-between mb-6"> 
             <h2 class="text-3xl font-bold text-gray-900">Event Terbaru</h2>
         </div>
 
@@ -233,7 +233,7 @@
                 <img src="{{ asset('logo/download.png') }}" alt="concert" class="h-32 mb-6">
                 <h3 class="font-semibold text-lg mb-2">Download Your Ticket!</h3>
                 <p class="text-gray-500 text-sm">
-                    After completing checkout, download your ticket and get ready for the event!
+                    After completings checkout, download your ticket and get ready for the event!
                 </p>
             </div>
 
